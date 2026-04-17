@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TowLink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="logo">🔗 TowLink</div>
+    <ul class="nav-links">
+      <li><a href="#map-section">Find Help</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">Roadside Assistance, Reinvented</p>
+      <h1>Stranded? <span class="accent">Help You Can See.</span></h1>
+      <p class="hero-sub">Connect with nearby tow operators in seconds. Real-time tracking, upfront pricing, no surprises.</p>
+      <a href="#map-section" class="btn">Find Trucks Near Me</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <h2><span class="count" data-target="340">0</span>+</h2>
+      <p>Operators Nationwide</p>
+    </div>
+    <div class="stat">
+      <h2><span class="count" data-target="12">0</span> min</h2>
+      <p>Avg. Response Time</p>
+    </div>
+    <div class="stat">
+      <h2><span class="count" data-target="98">0</span>%</h2>
+      <p>Customer Satisfaction</p>
+    </div>
+    <div class="stat">
+      <h2>24/7</h2>
+      <p>Always Available</p>
+    </div>
+  </section>
+
+  <section class="map-section" id="map-section">
+    <h2>Find Tow Trucks Near You</h2>
+    <p class="section-sub">Click anywhere on the map to see available operators nearby.</p>
+    <div class="map-layout">
+      <div id="map"></div>
+      <div class="sidebar">
+        <h3>Nearby Operators</h3>
+        <div id="operator-list">
+          <p class="hint">📍 Click the map to get started.</p>
+        </div>
+        <button class="btn" id="request-btn" style="display:none;">🚛 Request a Tow</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">📍</div>
+        <h3>Drop Your Pin</h3>
+        <p>Share your location with one tap. No account needed.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">🔍</div>
+        <h3>We Match You</h3>
+        <p>We connect you to the nearest available tow operator.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">🛰️</div>
+        <h3>Track in Real Time</h3>
+        <p>Watch your driver on the map. Upfront price, no hidden fees.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Get Early Access</h2>
+    <p class="section-sub">Join the waitlist and be first when TowLink launches in your city.</p>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Email Address" required/>
+      <button type="submit" class="btn">Join the Waitlist</button>
+    </form>
+    <p class="success-msg" id="success-msg">🎉 You're on the list!</p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 TowLink. Built for stranded commuters everywhere.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
